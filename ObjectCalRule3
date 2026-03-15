@@ -1,0 +1,28 @@
+#VIOLANDO A REGRA 3 
+class Pessoa:
+    def __init__(self, nome: str, idade: int):
+        # Usando um primitivo puro para um conceito importante.
+        if idade < 0 or idade > 150:
+            raise ValueError("Idade inválida!")
+            
+        self.nome = nome
+        self.idade = idade
+
+#APLICANDO A REGRA 3
+
+# Aplicando int em uma classe
+class Idade:
+    def __init__(self, valor: int):
+        if valor < 0 or valor > 150:
+            raise ValueError("Idade inválida!")
+        self.valor = valor
+
+    def eh_maior_de_idade(self) -> bool:
+        return self.valor >= 18
+
+
+# A classe Pessoa agora usa o objeto, e não o int
+class Pessoa:
+    def __init__(self, nome: str, idade: Idade):
+        self.nome = nome
+        self.idade = idade
