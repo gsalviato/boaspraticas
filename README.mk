@@ -15,7 +15,7 @@ Regra 1 Apenas um nível de indentação por método de extração de métodos p
 Regra 2. Uso de Early Return para eliminar fluxos condicionais complexos e aninhados.
 
 Object Calisthenics - Lei 3 (ObjectCalRule3.py)
-Regra 3 Envolva todos os primitivos e Strings: Criação de Value Objects (Objetos de Valor). Em vez de passar um simples string ou int que não tem significado de domínio, criei classes específicas como Email, CPF e Idade para garantir a validação e encapsular o comportamento logo na origem.
+Regra 3 Envolva todos os primitivos e Strings.	 Criação de Value Objects (Objetos de Valor). Em vez de passar um simples string ou int que não tem significado de domínio, criei classes específicas como Email, CPF e Idade para garantir a validação e encapsular o comportamento logo na origem.
 
 Object Calisthenics - Leis 8 e 9 (ObjectCalRule8&9.py)
 Regra 8. Promoção de alta coesão desmontando classes Deus (God classes) em objetos menores e mais focados.
