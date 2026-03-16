@@ -11,11 +11,10 @@ Problema de acoplamento causado por objetos que sabem demais sobre a estrutura i
 O código foi refatorado para que os objetos apenas se comuniquem com seus amigos imediatos, delegando comportamentos em vez de expor estruturas internas.
 
 Object Calisthenics - Leis 1 e 2 (ObjectCalRule1&2.py)
-Regra 1 Apenas um nível de indentação por método de extração de métodos para melhorar a legibilidade e focar na responsabilidade única.
-Regra 2. Uso de Early Return para eliminar fluxos condicionais complexos e aninhados.
+Uso de apenas um nível de indentação por método de extração de métodos para melhorar a legibilidade e focar na responsabilidade única.
+Uso de Early Return para eliminar fluxos condicionais complexos e aninhados.
 
-Object Calisthenics - Lei 3 (ObjectCalRule3.py)
-	 
+Object Calisthenics - Lei 3 (ObjectCalRule3.py)	 
 Em vez de passar um simples string ou int que não tem significado de domínio, criei classes específicas como Nome e Idade para garantir a validação e encapsular o comportamento logo na origem.
 
 Object Calisthenics - Leis 8 e 9 (ObjectCalRule8&9.py)
