@@ -1,27 +1,28 @@
-Este repositório é onde coloco em execução boas práticas de código. O objetivo é treinar a escrita de códigos mais limpos, coesos e menos acoplados.
+This repository is where I put code best practices into action. The goal is to practice writing cleaner, more cohesive, and loosely coupled code.
 
-Cada arquivo deste projeto foca em refatorar um problema comum aplicando uma ou mais regras específicas de boas práticas. Abaixo está a descrição do que foi explorado em cada um deles.
+Each file in this project focuses on refactoring a common problem by applying one or more specific best practice rules. Below is a description of what was explored in each of them.
 
-Contra FLOAT (FLOAT.py)
-Tipos primitivos de ponto flutuante (float, double) sofrem de problemas de precisão, o que pode causar bugs graves, especialmente lidando com dinheiro.
-Pratiquei a substituição de float para armazenar valores monetários em inteiros/centavos.
 
-Lei de Demeter (LeiDeDemeter.py)
-Problema de acoplamento causado por objetos que sabem demais sobre a estrutura interna de outros objetos.
-O código foi refatorado para que os objetos apenas se comuniquem com seus amigos imediatos, delegando comportamentos em vez de expor estruturas internas.
+### **Against FLOAT (`FLOAT.py`)**
+* Primitive floating-point types (`float`, `double`) suffer from precision issues, which can cause severe bugs, especially when dealing with money.
+* I practiced replacing floats to store monetary values as integers/cents.
 
-Object Calisthenics - Leis 1 e 2 (ObjectCalRule1&2.py)
-Uso de apenas um nível de indentação por método de extração de métodos para melhorar a legibilidade e focar na responsabilidade única.
-Uso de Early Return para eliminar fluxos condicionais complexos e aninhados.
+### **Law of Demeter (`LeiDeDemeter.py`)**
+* Coupling problem caused by objects knowing too much about the internal structure of other objects.
+* The code was refactored so that objects only communicate with their immediate friends, delegating behaviors instead of exposing internal structures.
 
-Object Calisthenics - Lei 3 (ObjectCalRule3.py)	 
-Em vez de passar um simples string ou int que não tem significado de domínio, criei classes específicas como Nome e Idade para garantir a validação e encapsular o comportamento logo na origem.
+### **Object Calisthenics - Rules 1 & 2 (`ObjectCalRule1&2.py`)**
+* Use of only one level of indentation per method by extracting methods to improve readability and focus on single responsibility.
+* Use of *Early Return* to eliminate complex and nested conditional flows.
 
-Object Calisthenics - Leis 8 e 9 (ObjectCalRule8&9.py)
-Promoção de alta coesão desmontando God classes em objetos menores e mais focados.
-O foco passou a ser em pedir para o objeto fazer algo com seus próprios dados, em vez de arrancar os dados dele para manipulá-los em outro lugar.
+### **Object Calisthenics - Rule 3 (`ObjectCalRule3.py`)**
+* Instead of passing a simple `string` or `int` that has no domain meaning, I created specific classes like `Name` and `Age` to ensure validation and encapsulate behavior right at the source.
 
-YAGNI, KISS e SINE (YAGNI.py)
-YAGNI - Remoção de códigos especulativos e funcionalidades feitas para o caso de precisarmos no futuro. Foco no requisito atual.
-KISS - Refatoração de soluções exageradamente complexas para abordagens mais simples, diretas e fáceis de entender.
-SOLID - Aplicação de princípios como Responsabilidade Única (SRP) e Inversão de Dependência (DIP) para deixar a arquitetura mais flexível.
+### **Object Calisthenics - Rules 8 & 9 (`ObjectCalRule8&9.py`)**
+* Promotion of high cohesion by dismantling *God classes* into smaller, more focused objects.
+* The focus shifted to asking the object to do something with its own data, rather than extracting its data to manipulate it elsewhere.
+
+### **YAGNI, KISS, and SOLID (`YAGNI.py`)**
+* **YAGNI:** Removal of speculative code and features built just in case we need them in the future. Focus on the current requirement.
+* **KISS:** Refactoring overly complex solutions into simpler, more straightforward, and easier-to-understand approaches.
+* **SOLID:** Application of principles like Single Responsibility (SRP) and Dependency Inversion (DIP) to make the architecture more flexible.
